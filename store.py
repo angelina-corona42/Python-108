@@ -24,7 +24,7 @@ def menu():
     print(" Q.- Quit")
 
 
-# Catalog and Cart Functions
+# ---- Catalog and Cart Functions ------
 
 def print_catalog():
     header("- Our Catalog -")
@@ -107,12 +107,27 @@ MINI CHALLENGE:
 """
 
 
-# Complete mini challenge here:
+# Completed mini challenge:
 def view_cart():
-    # call your header function here
+  
+    # This calls the header() function and pass in the text
+    header("Your Cart")
+    # "if not cart" checks if the cart list is empty which makes it false
+    if not cart:
+        print("Your cart is empty")
+    else:
+        # Loop through every product stored in the cart.
+        # "prod" represents one product at a time.
+        for prod in cart:
 
-# MAIN PROGRAM LOOP
+            # Printed the product ID, title, and price.
+            # Since each product is a dictionary, I accessed the values using their keys
+            print(f'ID {prod["id"]} | {prod["title"]} | ${prod["price"]}')
 
+
+# ---- Main Program Loop ------
+
+# 
 options = ""
 
 while options != "q" and options != "Q":
