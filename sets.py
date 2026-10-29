@@ -18,7 +18,6 @@ unique_emails = set(emails)
 print(unique_emails)
 print(list(unique_emails))
 
-
 # Add Items - Only does this one at a time 
 fruits.add("orange")
 print(fruits)
